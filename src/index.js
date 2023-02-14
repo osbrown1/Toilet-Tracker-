@@ -1,44 +1,33 @@
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+/* eslint-disable */
+import {leaflet} from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+import 'leaflet/src/Leaflet.js';
 import './css/styles.css';
+ 
 
-// Business Logic
+// Initialize the map
+function map(){
+let mymap = L.map("map").setView([45.519859, -122.677803], 13);
 
-function getWeather(city) {
-  let request = new XMLHttpRequest();
-  const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.API_KEY}`;
+// Add a tile layer (the base map)
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+  attribution:
+    'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+}).addTo(mymap);
 
-  request.addEventListener("loadend", function() {
-    const response = JSON.parse(this.responseText);
-    if (this.status === 200) {
-      printElements(response, city);
-    } else {
-      printError(this, response, city);
-    }
-  });
+// Add a marker to the map
+let marker = L.marker([45.519859, -122.677803]).addTo(mymap);
 
-  request.open("GET", url, true);
-  request.send();
+// Add a popup to the marker
+marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
 }
 
-// UI Logic
+window.addEventListener('load', function() {
+  map();
+})
 
-function printElements(apiResponse, city) {
-  document.querySelector('#showResponse').innerText = `The humidity in ${city} is ${apiResponse.main.humidity}%. 
-  The temperature in Kelvins is ${apiResponse.main.temp} degrees.`;
-}
+// // Create a new marker cluster group
+// let markers = L.markerClusterGroup();
 
-function printError(request, apiResponse, city) {
-  document.querySelector('#showResponse').innerText = `There was an error accessing the weather data for ${city}: ${request.status} ${request.statusText}: ${apiResponse.message}`;
-}
-
-function handleFormSubmission(event) {
-  event.preventDefault();
-  const city = document.querySelector('#location').value;
-  document.querySelector('#location').value = null;
-  getWeather(city);
-}
-
-window.addEventListener("load", function() {
-  document.querySelector('form').addEventListener("submit", handleFormSubmission);
-});
+// markers.addLayer(marker);
