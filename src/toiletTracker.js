@@ -1,10 +1,5 @@
 import 'leaflet';
-import 'leaflet/dist/'
-
-
-
-
-
+import 'leaflet/dist/';
 // import UebermapsMap from "./maps.js"; 
 
 

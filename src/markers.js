@@ -23,6 +23,6 @@ import 'leaflet/src/Leaflet.js';
 export default class Marker {
   constructor(){
     this.marker1 = [45.519859, -122.677803];
-  }
-   
+  }   
 }
+
