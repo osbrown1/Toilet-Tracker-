@@ -1,104 +1,79 @@
+/* Set the body to use the toilet paper background */
 body {
-  background-color: #fff0d4;
-  background-image: url("https://i.imgur.com/3q1mFpu.png");
-  background-size: cover;
-  background-repeat: repeat;
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  background-image: repeating-linear-gradient(0deg, #f8f8f8, #f8f8f8 10px, #fff 10px, #fff 20px);
+  background-size: 100% 20px;
 }
 
-h1, h2 {
-  color: #b30000;
-  font-size: 2.5rem;
-  text-align: center;
-  text-shadow: 2px 2px #d9d9d9;
-}
-
+/* Add some padding and a margin to the map container */
 #map {
-  height: 100%;
-  width: 100%;
+  padding: 20px;
+  margin: 20px;
 }
 
-.leaflet-popup-content-wrapper {
-  background-color: #fff7e6;
-  border-radius: 15px;
-  padding: 15px;
-  text-align: center;
-}
-
-.leaflet-popup-tip {
-  background-color: #fff7e6;
-}
-
-.leaflet-tooltip {
-  background-color: #fff7e6;
-  border: none;
-  color: #333;
-}
-
+/* Change the color of the leaflet marker to a toilet icon */
 .leaflet-marker-icon {
-  background-image: url("https://i.imgur.com/lMx8K7d.png");
+  background-image: url('https://cdn.pixabay.com/photo/2020/06/03/07/35/toilet-5257119_1280.png');
   background-size: contain;
   background-repeat: no-repeat;
-  height: 40px;
-  width: 40px;
+  background-position: center;
+}
+
+/* Change the color of the leaflet circle to a toilet paper color */
+.leaflet-interactive path {
+  fill: #f8f8f8;
+  stroke: #ccc;
+}
+
+/* Style the popup to look like a toilet paper roll */
+.leaflet-popup-content-wrapper {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.leaflet-popup-content {
+  text-align: center;
+}
+
+.leaflet-popup-tip-container {
+  display: none;
+}
+
+/* Style the page heading to look like a restroom sign */
+h1 {
+  font-size: 40px;
+  margin: 20px 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-family: sans-serif;
+  color: #ccc;
+  text-shadow: 2px 2px #000;
+}
+
+/* Style the input to look like a toilet seat */
+input[type="text"] {
   border: none;
-}
-
-.leaflet-marker-icon:active {
-  transform: scale(1.1);
-}
-
-.leaflet-div-icon {
-  background-color: transparent;
-}
-
-.leaflet-cluster {
-  background-color: #fff7e6;
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: white;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 18px;
   font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
 }
 
-.leaflet-cluster div {
-  margin-top: -7px;
-  margin-left: -7px;
+/* Add some silly hover animations */
+.leaflet-marker-icon:hover {
+  transform: rotate(180deg);
 }
 
-.leaflet-cluster-anim {
-  background-color: #fff7e6;
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
+h1:hover {
+  color: #ff69b4;
+  text-shadow: 2px 2px #000, 4px 4px #ff69b4;
 }
 
-.leaflet-cluster-anim div {
-  margin-top: -7px;
-  margin-left: -7px;
-}
-
-.leaflet-cluster-anim div span {
-  animation: pulse 1s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.5);
-    opacity: 0.5;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+input[type="text"]:hover {
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
 }
