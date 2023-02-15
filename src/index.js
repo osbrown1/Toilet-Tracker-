@@ -29,7 +29,8 @@ let circle = L.circle([45.50, -122.677], {
   fillColor: '#f03',
   fillOpacity: 0.5,
   radius: 1000
-}).addTo(mymap)
+  }).addTo(mymap)
+circle.bindPopup("Bathrooms here!");
 
 // Add a popup to the marker
 marker.bindPopup("<b>Hello world!</b><br>I am a toilet!").openPopup();
