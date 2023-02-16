@@ -1,6 +1,6 @@
 # _Toilet Tracker_
 
-#### By _Asia K, Erin Timlin, Kai Clausen, Noah Atkinson, Owen, Vera Weikel_
+#### By _Asia Kaplanyan, Erin Timlin, Kai Clausen, Noah Atkinson, Owen Brown, Vera Weikel_
 
 #### _A project application built to Add/Find a bathroom_
 
@@ -37,13 +37,17 @@ _This project objective is to further explore and practice API's and help people
 
 ## Known Bugs
 
-- _None_
+- _No shadow for marker_
+- _Marker image will only show up for some people, broken image for others_
+- _You have to click away from a marker before deleting it_
+- _
+
 
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
-Copyright (c) 2023 Asia K, Erin Timlin, Kai Clausen, Noah Atkinson, Owen, Vera Weikel
+Copyright (c) 2023 Asia Kaplanyan, Erin Timlin, Kai Clausen, Noah Atkinson, Owen, Vera Weikel
 
 MIT License
 
