@@ -62,10 +62,6 @@ export function handleMap(){
         const title = input.value;
         popup.setContent(`${title} ${buttonRemove}`);
         marker.openPopup();
-
-        popup.addEventListener("click", function(event) {
-          
-        })
         })
       })
 
