@@ -6,7 +6,6 @@ import './css/styles.css';
 import Marker from './markers.js';
 import buildMap from './maps';
 
- 
 
 // Initialize the map
 export function handleMap(){
@@ -27,7 +26,7 @@ export function handleMap(){
   let marker = L.marker([45.519859, -122.677803]).addTo(mymap); {
   }
   // Add a popup to the marker
-  marker.bindPopup("<b>Hello world!</b><br>I am a toilet!").openPopup();
+  marker.bindPopup("<b>Hello world!</b><br>I am Epicodus' Bathroom").openPopup();
 
   mymap.addEventListener("click", function(event) {
     // Get coordinates of click
@@ -46,25 +45,31 @@ export function handleMap(){
     // Create a new marker with name and coordinates
     const marker = L.marker([lat, lng], {
       draggable: true,
+      
     })
       const popup = L.popup();
       marker.addTo(mymap);
       marker.bindPopup(popup);
-      let input = document.createElement('textarea');
-      // input.type = 'text';
+      let input = document.createElement('input');
+      input.type = 'text';
       input.placeholder = "Name of Toilet Location:";
       marker.bindPopup(input);
       marker.openPopup();
       marker.on("popupopen", removeMarker);
       input.addEventListener("change", function() {
         // marker.closePopup();
-        marker.openPopup();
+        // marker.openPopup();
         const title = input.value;
-        popup.setContent(`${title} 
-        ${buttonRemove}`);
+        popup.setContent(`${title} ${buttonRemove}`);
+        marker.openPopup();
+
+        popup.addEventListener("click", function(event) {
+          
+        })
+        })
       })
 
-    
+};    
 
     
 
@@ -98,10 +103,10 @@ export function handleMap(){
     //     marker.remove();
     //   });
   
-});
+
 // find event listner for the marker
 //add remove function to that
-}
+
 
 
 

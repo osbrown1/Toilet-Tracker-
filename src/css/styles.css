@@ -51,6 +51,17 @@ h1 {
   text-shadow: 2px 2px #000;
 }
 
+h2 {
+  font-size: 30px;
+  margin: 20px 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-family: sans-serif;
+  color: #aea3e9;
+  text-shadow: 2px 2px #000;
+}
+
 /* Style the input to look like a toilet seat */
 input[type="text"] {
   border: none;
