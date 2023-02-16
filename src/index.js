@@ -9,6 +9,12 @@ import buildMap from './maps';
 
 // Initialize the map
 export function handleMap(){
+  const poo = L.icon({
+    iconUrl: 'https://assets.stickpng.com/images/5897a52fcba9841eabab614b.png',
+    iconSize: [25, 50],
+    iconAnchor: [11, 35],
+    popupAnchor: [-3, -76]
+  })
   let markerObject = new Marker()
   let mymap = L.map("map").setView([45.519859, -122.677803], 13);
   // let markerCluster = L.marketClusterGroup();
@@ -23,7 +29,7 @@ export function handleMap(){
   // }).addTo(mymap);
 
   // Add a marker to the map
-  let marker = L.marker([45.519859, -122.677803]).addTo(mymap); {
+  let marker = L.marker([45.519859, -122.677803], {icon: poo}).addTo(mymap); {
   }
   // Add a popup to the marker
   marker.bindPopup("<b>Hello world!</b><br>I am Epicodus' Bathroom").openPopup();
@@ -45,6 +51,7 @@ export function handleMap(){
     // Create a new marker with name and coordinates
     const marker = L.marker([lat, lng], {
       draggable: true,
+      icon: poo,
       
     })
       const popup = L.popup();
