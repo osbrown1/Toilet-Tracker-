@@ -22,16 +22,8 @@
 _This project objective is to further explore and practice API's and help people Add/Find a bathroom_
 
 ## Setup/Installation Requirements
-- To get an API key for ExchangeRate-API click [here](https://leafletjs.com/)
-- Input your email address and click the "Get Free Key" button.
-- You'll be prompted to create an account with your email, first name and a password. Agree to the terms of use and click "Get Started!"
-- At this point, you'll be able to access a dashboard that includes your API key as well as your remaining API calls for two weeks.
 - Clone or download to your local repository
-- add .env to our .gitignore file now.
-- create a .env file in the root directory of our project
-- The variable that we're storing in the .env is the key: API_KEY
 - run npm install
-- in your terminal, run $npm install dotenv-webpack@2.0.0 --save-dev
 - npm run start to build and launch server
 
 
